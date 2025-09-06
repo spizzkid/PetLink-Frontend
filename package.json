@@ -6,8 +6,9 @@
   "author": "example.com",
   "homepage": "https://electron-vite.org",
   "scripts": {
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --write .",
-    "lint": "eslint --cache .",
     "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
     "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
     "typecheck": "npm run typecheck:node && npm run typecheck:web",
@@ -21,8 +22,20 @@
     "build:linux": "electron-vite build && electron-builder --linux"
   },
   "dependencies": {
+    "@authing/guard-react": "^5.3.9",
+    "@authing/guard-react18": "^5.3.9",
+    "@authing/react-ui-components": "^4.5.45",
     "@electron-toolkit/preload": "^3.0.2",
-    "@electron-toolkit/utils": "^4.0.0"
+    "@electron-toolkit/utils": "^4.0.0",
+    "antd": "^5.26.7",
+    "axios": "^1.11.0",
+    "better-sqlite3": "^12.2.0",
+    "dayjs": "^1.11.18",
+    "form-data": "^4.0.4",
+    "recharts": "^3.1.2",
+    "uuid": "^11.1.0",
+    "zod": "^4.0.17",
+    "zustand": "^5.0.7"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^3.0.0",
@@ -31,6 +44,7 @@
     "@types/node": "^22.16.5",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "@types/uuid": "^10.0.0",
     "@vitejs/plugin-react": "^4.7.0",
     "electron": "^37.2.3",
     "electron-builder": "^25.1.8",
