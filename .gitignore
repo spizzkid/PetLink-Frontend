@@ -7,3 +7,8 @@ out
 *.tsbuildinfo
 netlog.json
 QWEN.md
+
+# 个人配置文件
+.claude/
+.github/instructions/
+.vscode/
