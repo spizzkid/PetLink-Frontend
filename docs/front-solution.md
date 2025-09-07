@@ -2,7 +2,7 @@
 
 ## 🎯 核心特点
 
-**API已移除认证机制，直接访问！**
+**API没有认证机制，直接访问！**
 
 - ✅ 无需Token认证，直接调用API
 - ✅ 无需处理认证错误和刷新
@@ -131,7 +131,7 @@ class PetlinkAPI {
     const headers = {
       ...options.headers
     };
-    
+
     if (options.method && ['POST', 'PUT'].includes(options.method)) {
       headers['Content-Type'] = 'application/json';
     }
